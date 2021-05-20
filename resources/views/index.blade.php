@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="filters flex space-x-6">
-        <div class="w-1/3">
+    <div class="filters flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
+        <div class="w-full md:w-1/3">
             <select
                 name="category"
                 id="category"
@@ -12,7 +12,7 @@
                 <option value="Category Four">Category Four</option>
             </select>
         </div>
-        <div class="w-1/3">
+        <div class="w-full md:w-1/3">
             <select
                 name="other_filters"
                 id="other_filters"
@@ -24,7 +24,7 @@
                 <option value="Filter Four">Filter Four</option>
             </select>
         </div>
-        <div class="w-2/3 relative">
+        <div class="w-full md:w-2/3 relative">
             <input
                 type="search"
                 placeholder="Find an idea"
@@ -50,7 +50,7 @@
     <div class="ideas-container space-y-6 my-6">
         <div
             class="idea-container hover:shadow-card transition duration-150 ease-in bg-white rounded-xl flex cursor-pointer">
-            <div class="border-r border-gray-100 px-5 py-8">
+            <div class="hidden md:block border-r border-gray-100 px-5 py-8">
                 <div class="text-center">
                     <div class="font-semibold text-2xl">12</div>
                     <div class="text-gray-500">Votes</div>
@@ -62,8 +62,8 @@
                     >Vote</button>
                 </div>
             </div>
-            <div class="flex flex-1 px-2 py-6">
-                <div class="flex-none">
+            <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
+                <div class="flex-none mx-2 md:mx-0">
                     <a
                         href="#"
                     >
@@ -74,8 +74,8 @@
                         >
                     </a>
                 </div>
-                <div class="w-full mx-4">
-                    <h4 class="text-xl font-semibold">
+                <div class="w-full flex flex-col justify-between mx-2 md:mx-4">
+                    <h4 class="text-xl font-semibold mt-2 md:mt-0">
                         <a
                             href="#"
                             class="hover:underline"
@@ -85,7 +85,7 @@
                         Lorem ipsum dolor sit amet consectetur.
                     </div>
 
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
@@ -95,7 +95,7 @@
                         </div>
                         <div
                             x-data="{ isOpen: false }"
-                            class="flex items-center space-x-2"
+                            class="flex items-center space-x-2 mt-4 md:mt-0"
                         >
                             <div
                                 class="bg-gray-200 text-xss font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
@@ -120,7 +120,7 @@
                                     x-show.transition.origin.top.left="isOpen"
                                     @click.away="isOpen = false"
                                     @keydown.escape.window="isOpen = false"
-                                    class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                                    class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 md:ml-8 top-8 md:top-6 right-0 md:left-0">
                                     <li><a
                                             href="#"
                                             class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
@@ -136,6 +136,18 @@
                                         </a>
                                     </li>
                                 </ul>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center md:hidden mt-4 md:mt-0">
+                            <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">
+                                <div class="text-sm font-bold leading-none">12</div>
+                                <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
+                            </div>
+                            <button
+                                class="w-20 bg-gray-200 border border-gray-200 font-bold text-xxs uppercase rounded-xl hover:border-gray-400 transition duration-150 ease-in px-4 py-3 -mx-5"
+                            >
+                                Vote
                             </button>
                         </div>
                     </div>
