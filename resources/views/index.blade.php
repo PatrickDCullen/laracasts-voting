@@ -62,18 +62,19 @@
                     >Vote</button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a
-                    href="#"
-                    class="flex-none"
-                >
-                    <img
-                        src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
-                        alt="avatar"
-                        class="w-14 h-14 rounded-xl"
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <a
+                        href="#"
                     >
-                </a>
-                <div class="mx-4">
+                        <img
+                            src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                            alt="avatar"
+                            class="w-14 h-14 rounded-xl"
+                        >
+                    </a>
+                </div>
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a
                             href="#"
@@ -81,15 +82,7 @@
                         >A random title can go here.</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perferendis necessitatibus
-                        aliquid sapiente alias vel numquam voluptate modi error? Atque possimus quidem molestiae
-                        voluptatum iure, minus quasi architecto placeat saepe necessitatibus quo? Assumenda perspiciatis
-                        error mollitia consequatur, dolor minus. In, sit. Aspernatur, praesentium quia! Facilis nostrum
-                        libero commodi necessitatibus distinctio sapiente non voluptates praesentium totam excepturi
-                        sequi iusto quod, eos officia, cumque dolor quos unde saepe. Quaerat quam enim dolorem at
-                        tenetur sunt repellendus corrupti ut exercitationem pariatur, suscipit voluptatem, est non
-                        beatae optio similique voluptatibus ex neque excepturi eveniet reprehenderit! Odit mollitia eos,
-                        iusto harum nisi ipsam facilis sunt?
+                        Lorem ipsum dolor sit amet consectetur.
                     </div>
 
                     <div class="flex items-center justify-between mt-6">
@@ -106,7 +99,7 @@
                                 Open
                             </div>
                             <button
-                                class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3"
+                                class="relative bg-gray-100 hover:bg-gray-200 border rounded-full h-7 transition duration-150 ease-in py-2 px-3"
                             >
                                 <svg
                                     fill="currentColor"
