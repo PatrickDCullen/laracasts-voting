@@ -93,12 +93,16 @@
                             <div>&bull;</div>
                             <div class="text-gray-900">3 comments</div>
                         </div>
-                        <div class="flex items-center space-x-2">
+                        <div
+                            x-data="{ isOpen: false }"
+                            class="flex items-center space-x-2"
+                        >
                             <div
                                 class="bg-gray-200 text-xss font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Open
                             </div>
                             <button
+                                @click="isOpen = !isOpen"
                                 class="relative bg-gray-100 hover:bg-gray-200 border rounded-full h-7 transition duration-150 ease-in py-2 px-3"
                             >
                                 <svg
@@ -112,6 +116,10 @@
                                     >
                                 </svg>
                                 <ul
+                                    x-cloak
+                                    x-show.transition.origin.top.left="isOpen"
+                                    @click.away="isOpen = false"
+                                    @keydown.escape.window="isOpen = false"
                                     class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
                                     <li><a
                                             href="#"
