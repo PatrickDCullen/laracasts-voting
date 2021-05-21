@@ -57,7 +57,7 @@ class ShowIdeasTest extends TestCase
         $ideaOne->title = 'My First Idea';
         $ideaOne->save();
 
-        $ideaEleven = Idea::find(11);
+        $ideaEleven = Idea::find(Idea::PAGINATION_COUNT + 1);
         $ideaEleven->title = 'My Eleventh Idea';
         $ideaEleven->save();
 
