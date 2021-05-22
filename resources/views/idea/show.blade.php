@@ -19,7 +19,7 @@
                     href="#"
                 >
                     <img
-                        src="https://source.unsplash.com/200x200/?face&crop=face&v=1"
+                        src="{{ $idea->user->getAvatar() }}"
                         alt="avatar"
                         class="w-14 h-14 rounded-xl"
                     >
