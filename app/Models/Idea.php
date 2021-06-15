@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use App\Exceptions\DuplicateVoteException;
-use App\Exceptions\VoteNotFoundException;
+use App\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
+use App\Exceptions\VoteNotFoundException;
+use App\Exceptions\DuplicateVoteException;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -15,6 +16,11 @@ class Idea extends Model
     const PAGINATION_COUNT = 10;
 
     protected $guarded = [];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 
     /**
      * Return the sluggable configuration array for this model.
