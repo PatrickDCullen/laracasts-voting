@@ -8,7 +8,6 @@
                     :ideaUserId="$idea->user->id"
                 />
             @endforeach
-
         </div>  <!-- end comments-container -->
 
         <div class="my-8 md:ml-22">
