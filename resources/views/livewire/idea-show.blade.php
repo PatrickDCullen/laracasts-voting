@@ -110,20 +110,22 @@
                                     </a>
                                 </li>
 
-                                @if ($idea->spam_reports > 0)
-                                    <li>
-                                        <a
-                                            href="#"
-                                            @click.prevent="
-                                                    isOpen = false
-                                                    $dispatch('custom-show-mark-idea-as-not-spam-modal')
-                                                "
-                                            class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
-                                        >
-                                            Not Spam
-                                        </a>
-                                    </li>
-                                @endif
+                                @admin
+                                    @if ($idea->spam_reports > 0)
+                                        <li>
+                                            <a
+                                                href="#"
+                                                @click.prevent="
+                                                        isOpen = false
+                                                        $dispatch('custom-show-mark-idea-as-not-spam-modal')
+                                                    "
+                                                class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
+                                            >
+                                                Not Spam
+                                            </a>
+                                        </li>
+                                    @endif
+                                @endadmin
                             </ul>
                         </div>
                         @endauth
