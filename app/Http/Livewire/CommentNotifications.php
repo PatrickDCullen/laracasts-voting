@@ -77,8 +77,6 @@ class CommentNotifications extends Component
 
         $page = (int) ($indexOfComment / $comment->getPerPage()) + 1;
 
-        dd($comments);
-
         session()->flash('scrollToComment', $comment->id);
 
         return redirect()->route('idea.show', [
